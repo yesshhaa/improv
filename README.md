@@ -154,4 +154,4 @@ MIT
 
 ---
 
-<p align="center">Built with  AI ✦ by someone who just wanted better AI prompts for me and my friends</p>
+<p align="center">Built with  AI ✦ by someone who just wanted better</p>
