@@ -5,26 +5,14 @@ import { useState, useRef, useEffect } from "react";
 type Step = "idle" | "asking" | "answering" | "refining" | "done" | "error";
 
 const SAMPLE_PROMPTS = [
-  { label: "🍎 Give me a weekly meal plan for a family of four that takes less than 30 mins to cook", category: "Health" },
-  { label: "💪 Build me a 3-day home workout using only dumbbells and bodyweight exercises", category: "Fitness" },
-  { label: "💰 Help me create a monthly budget plan based on the 50/30/20 rule to save for a house", category: "Finance" },
-  { label: "🎓 Outline a 3-month study plan to learn conversational Spanish for an upcoming trip", category: "Learning" },
-  { label: "🍳 Teach me how to cook basic vegetarian dinners starting from absolutely zero experience", category: "Cooking" },
-  { label: "💼 Help me negotiate a higher salary and get a promotion in my tech industry job", category: "Career" },
-  { label: "🎨 Build a comprehensive brand identity and color palette for my new creative agency", category: "Creative" },
-  { label: "🏠 Give me a room-by-room guide to aggressively declutter and organize a messy apartment", category: "Life" },
-  { label: "✈️ Plan a detailed 7-day itinerary for Japan focused on street food, temples, and culture", category: "Travel" },
-  { label: "📝 Write a polite but firm timeline extension request email turning down an unrealistic deadline", category: "Productivity" },
-  { label: "💻 Explain Quantum Computing concepts like superposition using simple everyday analogies", category: "Education" },
-  { label: "🎤 Help me write a funny and heartwarming 5-minute wedding speech for my best friend", category: "Events" },
-  { label: "🌱 Give me a beginner's guide to start a small indoor herb garden with minimal sunlight", category: "Hobby" },
-  { label: "🧘‍♀️ Create a realistic 30-minute minimal morning routine to boost energy and mental clarity", category: "Wellness" },
-  { label: "🎵 Recommend an essential playlist of obscure 80s synth-pop and new wave deep cuts", category: "Music" },
-  { label: "🐶 Provide a week-by-step positive reinforcement training schedule to potty train a new puppy", category: "Pets" },
-  { label: "🌐 Design a modern, responsive landing page for a local coffee shop including a menu and contact form", category: "WebDev" },
-  { label: "🛒 Plan the architecture and user flow for a full-stack e-commerce website selling handmade pottery", category: "WebDev" },
-  { label: "🚀 Write a complete SEO optimization strategy for a new personal tech blog to rank on Google", category: "WebDev" },
-  { label: "📱 Create a step-by-step guide to build a simple portfolio website using React and Tailwind CSS", category: "WebDev" },
+  { label: "🍎 Give me a weekly meal plan", category: "Health" },
+  { label: "💪 Build me a home workout", category: "Fitness" },
+  { label: "💰 Help me create a budget", category: "Finance" },
+  { label: "🎓 Teach me Spanish fast", category: "Learning" },
+  { label: "🍳 Teach me to cook from zero", category: "Cooking" },
+  { label: "💼 Help me get promoted", category: "Career" },
+  { label: "🎨 Build my brand identity", category: "Creative" },
+  { label: "🏠 Help me declutter my home", category: "Life" },
 ];
 
 export default function Home() {
